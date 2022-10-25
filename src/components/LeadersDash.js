@@ -19,13 +19,13 @@ const LeadersDash = ({ users }) => {
             return (
               <tr key={user.id}>
                 <td className="border text-xl m-2">
-                  {user.name}
+                  <p data-testid="uName">{user.name}</p>
                 </td>
                 <td className="border text-xl m-2">
-                  {Object.keys(user.answers).length}
+                  <p data-testid="noOfAns">{Object.keys(user.answers).length}</p>
                 </td >
                 <td className="border text-xl m-2">
-                    {user.questions.length}
+                <p data-testid="noOfQs">{user.questions.length}</p>
                 </td>
               </tr>
             )

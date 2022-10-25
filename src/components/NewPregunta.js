@@ -51,12 +51,12 @@ const NewPregunta = ({ dispatch, authedUser }) => {
       <Authenticate />
       {success && (
         <div className="m-2">
-          <h1 className="text-green-900 text-xl" data-testid="success-header">New Question saved successfully</h1>
+          <h1 className="text-green-900 text-xl" data-testId="successMsg">New Question saved successfully</h1>
         </div>
       )}
       {error && (
         <div className="m-2">
-          <h1 className="text-red-900 text-xl" data-testid="error-header"> Error saving new question</h1>
+          <h1 className="text-red-900 text-xl" data-testId="errorMsg"> Error saving new question</h1>
         </div>  
       )}
       <div className="m-2"><h6 className="text-black text-xl text-center font-bold">Create your own poll</h6></div>
@@ -72,7 +72,7 @@ const NewPregunta = ({ dispatch, authedUser }) => {
             name="firstOptionValue"
             placeholder="Option One"
             onChange={optionOneChange}
-            data-testid="option-one-input"
+            data-testid="choice1Txt"
             required
           />
         </div>
@@ -86,7 +86,7 @@ const NewPregunta = ({ dispatch, authedUser }) => {
             name="secondOptionValue"
             placeholder="Option Two"
             onChange={optionTwoChange}
-            data-testid="option-two-input"
+            data-testid="choice2Txt"
             required
           />
         </div>

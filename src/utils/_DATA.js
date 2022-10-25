@@ -181,12 +181,11 @@ export function _saveQuestion (question) {
 export function _saveQuestionAnswer ({ authedUser, qid, answer }) {
   console.log('In _saveQuestionAnswer :: ',authedUser, qid, answer);
   return new Promise((resolve, reject) => {
-    /*
-    if (!authedUser || !id || !answer) {
-      console.log('Innnnn hereeee :: ',authedUser, id, answer);
-      reject("Please provide authedUser, id, and answer");
+    
+    if (!authedUser || !qid || !answer) {
+      console.log('Innnnn hereeee :: ',authedUser, qid, answer);
+      reject("Please provide authedUser, qid, and answer");
     }
-    */
     setTimeout(() => {
       users = {
         ...users,

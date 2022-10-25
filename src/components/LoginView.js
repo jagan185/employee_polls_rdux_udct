@@ -26,18 +26,19 @@ const LoginView = ({ userIds, users, dispatch }) => {
 
   const handleSubmit = (event) => {
     event.preventDefault();
+    console.log("submitedd:::");
     setSuccess(true);
     setError(false);
-    navigate("/");
+    //navigate("/");
   };
 
   return (
     <section className="h-full gradient-form bg-gray-200 md:h-screen">
       <div className="container py-12 px-6 h-full">
-        {success && <h1 data-testid="success-header">Login successful</h1>}
+        {success && <h1 data-testid="successMsgEle">Logged In!!</h1>}
         {error && (
-          <h1 data-testid="error-header">
-            Error: Please select the correct username.
+          <h1 data-testid="errorMsgEle">
+            Couldn't log in, select a user.
           </h1>
         )}
         <div className="flex justify-center items-center flex-wrap g-6 text-gray-800" key="flexDiv234r">
@@ -50,7 +51,7 @@ const LoginView = ({ userIds, users, dispatch }) => {
                 <select
                   name="users"
                   onChange={handleChange}
-                  data-testid="users-select"
+                  data-testid="userDropdownEle"
                   className="form-select mt-3"
                   defaultValue={optionSelected}
                   aria-label="Default select example"
@@ -73,6 +74,7 @@ const LoginView = ({ userIds, users, dispatch }) => {
                   type="button"
                   data-mdb-ripple="true"
                   data-mdb-ripple-color="light"
+                  data-testid="submitBtnEle"
                 >
                   Log in
                 </button>

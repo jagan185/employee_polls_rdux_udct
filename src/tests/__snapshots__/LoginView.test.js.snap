@@ -1,0 +1,3 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`LoginView LoginView component rendered without changes should match snapshot 1`] = `undefined`;
