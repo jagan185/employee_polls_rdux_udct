@@ -1,3 +1,6 @@
+/**
+ * @description unit tests for NewPregunta.js
+ */
 import { Provider } from "react-redux";
 import { legacy_createStore } from "redux";
 import { MemoryRouter } from "react-router-dom";
@@ -10,7 +13,7 @@ import NewPregunta from "../components/NewPregunta.js";
 
 const store = legacy_createStore(reducer, middleware);
 
-describe("NewQuestion", () => {
+describe("NewPregunta", () => {
   it("will save new question.", () => {
     render(
       <MemoryRouter>
@@ -24,8 +27,6 @@ describe("NewQuestion", () => {
     fireEvent.change(choice1, { target: { value: "Play FIFA" } });
     let choice2 = screen.getByTestId("choice2Txt");
     fireEvent.change(choice2, { target: { value: "Smoke SISHA" } });
-    //let submitBtn = screen.getByTestId("submit-button");
-    //fireEvent.click(submitBtn);
     fireEvent.submit(choice1,choice2);
     expect(screen.getByTestId("successMsg")).toBeInTheDocument();
     expect(screen.queryByTestId("errorMsg")).not.toBeInTheDocument();

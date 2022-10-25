@@ -24,6 +24,9 @@ const LoginView = ({ userIds, users, dispatch }) => {
     }
   };
 
+  /**
+   * @description mostly used to test the login functionality, onchange actullay logs in and navigates too
+   */
   const handleSubmit = (event) => {
     event.preventDefault();
     console.log("submitedd:::");

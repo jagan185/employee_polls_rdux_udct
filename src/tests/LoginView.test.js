@@ -1,3 +1,6 @@
+/**
+ * @description unit tests for LoginView.js
+ */
 import { Provider } from "react-redux";
 import { legacy_createStore } from "redux";
 import { MemoryRouter } from "react-router-dom";
@@ -26,7 +29,7 @@ describe("LoginView", () => {
     fireEvent.change(username, { target: { value: "sarahedo" } });
     console.log('tst usrename : '+username);
     let submitButton = screen.getByTestId("submitBtnEle");
-    fireEvent.click(submitButton); //this won't work since the onSubmit handler is on form and not the submit button
+    fireEvent.click(submitButton); //this won't work since the onSubmit handler is on form and not the submit
     //submit the form with the selected username
     fireEvent.submit(username);
     console.log('::: elee :'+screen.getByTestId("successMsgEle"));

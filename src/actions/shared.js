@@ -5,8 +5,6 @@ import { getQuestions } from "./questions.js";
 import { getInitialData } from "../utils/api.js";
 
 export function handleInitialData() {
-  console.log('Init....',);
-
   return dispatch => {
     dispatch(showLoading());
     console.log('loading.....');

@@ -1,3 +1,6 @@
+/**
+ * @description helper methods
+ */
 import { useLocation, useNavigate, useParams } from "react-router-dom";
 export function formatDate (timestamp) {
     const d = new Date(timestamp)
@@ -9,7 +12,7 @@ export function formatQuestion (question, author, authedUser) {
     let hasAnswer = false;
     let isAuthor = false;
     let voteSelected = '';
-  
+    //destructure question into required fields to be displayed
     const {
       id,
       timestamp,

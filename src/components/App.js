@@ -1,10 +1,13 @@
+/**
+ * @description main App component, all other components are nested using <Fragment/> and <Routes/>
+ */
 //import react stuff
 import { connect } from "react-redux";
 import { Fragment, useEffect } from "react";
 import { Route, Routes } from "react-router-dom";
 import { LoadingBar } from "react-redux-loading-bar";
 
-//import js files
+//import actions
 import { handleInitialData } from "../actions/shared.js";
 
 //import all the components to compose the App

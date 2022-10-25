@@ -1,8 +1,7 @@
-/*
+/**
  * @description unit tests for LeaderDash.js
- * 
  */
-import {fireEvent, render, screen} from "@testing-library/react";
+import {render, screen} from "@testing-library/react";
 import {Provider} from "react-redux";
 import { legacy_createStore } from "redux";
 import {BrowserRouter} from "react-router-dom";

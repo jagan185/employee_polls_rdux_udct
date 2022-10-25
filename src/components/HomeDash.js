@@ -1,3 +1,7 @@
+/**
+ * @description Home page, displays a dashboard of answered and unanswered questions
+ */
+
 import { useState } from "react";
 import { connect } from "react-redux";
 
@@ -46,6 +50,11 @@ const HomeDash = ({ votedFor, notVotedFor, users }) => {
   );
 };
 
+/**
+ * 
+ * @param { authedUser, questions, users } , state from store 
+ * @returns  props to be used by component
+ */
 const mapStateToProps = ({ authedUser, questions, users }) => {
   const voteCount = Object.keys(questions).map(question => questions[question]);
 

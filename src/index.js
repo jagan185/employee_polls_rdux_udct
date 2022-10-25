@@ -10,11 +10,11 @@ import middleware from './middleware';
 
 
 import './css/index.css';
-import App from './components/App';
+import App from './components/App.js';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 //create store using the legacy method, newer configureStore method required slices to be configured
-//we'll use mapStateToProps with Provider and createStore
+//we'll use mapStateToProps with Provider and legacy_createStore
 const store = legacy_createStore(reducer, middleware);
 
 root.render(

@@ -1,12 +1,11 @@
-/*
+/**
  * @description unit tests for _DATA.js
- * 
  */
 import {_saveQuestionAnswer, _saveQuestion} from "../utils/_DATA.js";
-//const {_saveQuestionAnswer, _saveQuestion} = require("./_DATA");
 
-//take more time to test async methods
+//it takes more time to test async methods
 jest.setTimeout(3000);
+
 
 /**
  * @description unit tests for _saveQuestion()

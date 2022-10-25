@@ -1,3 +1,8 @@
+/**
+ * @description checks for a logged in user and redirects to /login page 
+ *              place this component in every component which needs to be authenticated
+ */
+
 import { useEffect } from 'react';
 import { connect } from 'react-redux';
 import { useLocation, useNavigate } from 'react-router-dom';

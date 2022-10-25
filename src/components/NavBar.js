@@ -1,3 +1,6 @@
+/**
+ * @description NavBar component
+ */
 import React from "react";
 import { connect } from "react-redux";
 import { Link, useLocation, useNavigate } from "react-router-dom";
