@@ -4,7 +4,7 @@
 import {_saveQuestionAnswer, _saveQuestion} from "../utils/_DATA.js";
 
 //it takes more time to test async methods
-jest.setTimeout(3000);
+jest.setTimeout(4000);
 
 
 /**
