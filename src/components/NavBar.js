@@ -1,5 +1,5 @@
 /**
- * @description NavBar component
+ * @description NavBar component, built using tailwind css
  */
 import React from "react";
 import { connect } from "react-redux";

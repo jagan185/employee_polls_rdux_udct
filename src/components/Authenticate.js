@@ -11,7 +11,7 @@ const Authenticate = (props) => {
   const navigate = useNavigate();
   const location = useLocation();
   /*
-   * on load (of home dashboard) navigate to login page if not yet logged in
+   * on load navigate to login page if not yet logged in
    */
   useEffect(() => {
     const hasLoggedIn = props.hasLoggedIn;

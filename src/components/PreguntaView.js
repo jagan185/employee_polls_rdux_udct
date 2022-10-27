@@ -85,9 +85,8 @@ const PreguntaView = ({ question, dispatch, id, authedUser }) => {
 };
 
 const mapStateToProps = ({ authedUser, users, questions }, props) => {
-    const { id } = props.router.params;
+    const {id} = props.router.params;
     const question = questions[id];
-
     return {
         authedUser,
         id,

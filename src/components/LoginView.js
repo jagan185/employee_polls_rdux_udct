@@ -10,7 +10,10 @@ const LoginView = ({ userIds, users, dispatch }) => {
 
   const navigate = useNavigate();
   const location = useLocation();
-
+  /**
+   * @description when the dropdown changes, logs in the selected user
+   * @param {*} event 
+   */
   const handleChange = (event) => {
     event.preventDefault();
     setOptionSelected(event.target.value);
@@ -90,8 +93,8 @@ const LoginView = ({ userIds, users, dispatch }) => {
   );
 };
 const mapStateToProps = (state) => {
+  //get users from state and return userIds and users
   const users = state.users;
-
   return {
     userIds: Object.keys(users),
     users,

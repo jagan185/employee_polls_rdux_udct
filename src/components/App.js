@@ -1,5 +1,5 @@
 /**
- * @description main App component, all other components are nested using <Fragment/> and <Routes/>
+ * @description main App component, all other components are nested (composed) using <Fragment/> and <Routes/>
  */
 //import react stuff
 import { connect } from "react-redux";
@@ -20,6 +20,9 @@ import NewPregunta from "./NewPregunta.js";
 import LeadersDash from "./LeadersDash.js";
 
 function App(props) {
+  /**
+   * @description on load of App.js, fetch the data for the logged in user
+   */
   useEffect(() => {
     props.dispatch(handleInitialData());
   }, [props]);

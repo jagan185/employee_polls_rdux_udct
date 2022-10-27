@@ -38,11 +38,11 @@ const NewPregunta = ({ dispatch, authedUser }) => {
     navigate('/');
   };
 
-  const optionOneChange = (event) => {
+  const handleOptionOneChange = (event) => {
     setFirstOption(event.target.value);
   };
 
-  const optionTwoChange = (event) => {
+  const handleOptionTwoChange = (event) => {
     setSecondOption(event.target.value);
   };
 
@@ -71,7 +71,7 @@ const NewPregunta = ({ dispatch, authedUser }) => {
             className="bg-gray-50 border border-gray-300 text-gray-900 sm:text-sm rounded-lg focus:ring-primary-600 focus:border-primary-600 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
             name="firstOptionValue"
             placeholder="Option One"
-            onChange={optionOneChange}
+            onChange={handleOptionOneChange}
             data-testid="choice1Txt"
             required
           />
@@ -85,7 +85,7 @@ const NewPregunta = ({ dispatch, authedUser }) => {
             className="bg-gray-50 border border-gray-300 text-gray-900 sm:text-sm rounded-lg focus:ring-primary-600 focus:border-primary-600 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
             name="secondOptionValue"
             placeholder="Option Two"
-            onChange={optionTwoChange}
+            onChange={handleOptionTwoChange}
             data-testid="choice2Txt"
             required
           />

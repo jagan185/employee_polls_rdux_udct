@@ -1,3 +1,7 @@
+/**
+ * @description displays a table with users' and their stats of answered and unaswered questions in a table
+ */
+
 import { connect } from "react-redux";
 import Authenticate from "./Authenticate.js";
 
