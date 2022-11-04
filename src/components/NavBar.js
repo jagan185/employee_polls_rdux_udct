@@ -34,21 +34,22 @@ const NavBar = ({ user, authedUser, dispatch }) => {
                     <Link className="block mt-4 lg:inline-block lg:mt-0 text-teal-200 hover:text-white" to="/add">New</Link>
 
                 </div>
-                <div className="flex-row">
+                <span className="flex-row">
                     {authedUser ? (
-                        <div> {user?.name} </div>
+                        
+                        <span> <img src={user?.avatarURL} width="25" alt="img" /> {user?.name} </span>
                     ) : null}
 
                     {authedUser ? (
-                        <div onClick={handleLogout}>
+                        <span onClick={handleLogout}>
                             <Link to="/login" className="inline-block text-sm px-4 py-2 leading-none border rounded text-white border-white hover:border-transparent hover:text-teal-500 hover:bg-white mt-4 lg:mt-0">
                                 Logout
                             </Link>
-                        </div>
+                        </span>
                     ) : (
                         <Link to="/login" className="inline-block text-sm px-4 py-2 leading-none border rounded text-white border-white hover:border-transparent hover:text-teal-500 hover:bg-white mt-4 lg:mt-0">Login</Link>
                     )}
-                </div>
+                </span>
             </div>
         </nav>
     );
