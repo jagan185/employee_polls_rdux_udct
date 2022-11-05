@@ -9,6 +9,7 @@ import '@testing-library/jest-dom';
 
 import reducer from "../reducers";
 import middleware from "../middleware";
+import { login } from "../actions/authorizeUser.js";
 import LoginView from "../components/LoginView.js";
 
 
@@ -35,6 +36,20 @@ describe("LoginView", () => {
     console.log('::: elee :'+screen.getByTestId("successMsgEle"));
     expect(screen.getByTestId("successMsgEle")).toBeInTheDocument();
     expect(screen.queryByTestId("errorMsgEle")).not.toBeInTheDocument();
+  });
+
+  it("will login using dipatch method and check store for auth user", () => {
+    let { component } = render(
+      <MemoryRouter>
+        <Provider store={store}>
+          <LoginView />
+        </Provider>
+      </MemoryRouter>
+    );
+    store.dispatch(login("sarahedo"));
+    console.log(store.getState());
+
+    expect(store.getState().authedUser).toContain("sarahedo");
   });
 
   it("LoginView component rendered without changes should match snapshot", () => {
