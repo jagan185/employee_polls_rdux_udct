@@ -1,4 +1,5 @@
 import { Link } from "react-router-dom";
+import PropTypes from "prop-types";
 
 import Authenticate from "./Authenticate.js";
 import { formatDate } from "../utils/util.js";
@@ -20,4 +21,8 @@ const PreguntasView = ({ question, user, id }) => {
   );
 };
 
+PreguntasView.propTypes = {
+  question : PropTypes.object,
+  user : PropTypes.object.isRequired
+};
 export default PreguntasView;

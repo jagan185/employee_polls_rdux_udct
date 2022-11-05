@@ -34,10 +34,10 @@ const NavBar = ({ user, authedUser, dispatch }) => {
                     <Link className="block mt-4 lg:inline-block lg:mt-0 text-teal-200 hover:text-white" to="/add">New</Link>
 
                 </div>
-                <span className="flex-row">
+                <span className="flex-row inline">
                     {authedUser ? (
                         
-                        <span> <img src={user?.avatarURL} width="25" alt="img" /> {user?.name} </span>
+                        <span className="inline"> <img className="inline pl-1" src={user?.avatarURL} width="25" alt="img" /> {user?.name} </span>
                     ) : null}
 
                     {authedUser ? (

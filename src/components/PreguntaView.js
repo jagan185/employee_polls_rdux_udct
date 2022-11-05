@@ -1,5 +1,6 @@
 import { connect } from "react-redux";
 import { useNavigate } from "react-router-dom";
+import PropTypes from "prop-types";
 
 import Authenticate from "./Authenticate.js";
 import Page404 from "./Page404.js";
@@ -18,7 +19,7 @@ const PreguntaView = ({ question, dispatch, id, authedUser }) => {
 
     const {
         name,
-        // avatarURL,
+        avatarURL,
         optionOneText,
         optionTwoText,
         hasAnswer,
@@ -36,9 +37,7 @@ const PreguntaView = ({ question, dispatch, id, authedUser }) => {
     return (
         <div className="max-w-screen-xl m-2">
             <Authenticate />
-            <div className="text-xl m-2 text-center font-bold">
-                Question by {name}
-            </div>
+            <span className="text-xl font-bold inline"> Question by : {name}  <img className="inline" src={avatarURL} width="25" alt="img" /> </span>
             <div>
                 <h6 className="text-xl m-2 text-center font-bold">Would you rather</h6>
                 {hasAnswer ? (
@@ -94,4 +93,9 @@ const mapStateToProps = ({ authedUser, users, questions }, props) => {
     };
 };
 
+PreguntaView.propTypes = {
+    question : PropTypes.object,
+    authedUser : PropTypes.object.isRequired,
+    id : PropTypes.string.isRequired
+};
 export default withRouter(connect(mapStateToProps)(PreguntaView));

@@ -3,6 +3,8 @@
  */
 
 import { connect } from "react-redux";
+import PropTypes from "prop-types";
+
 import Authenticate from "./Authenticate.js";
 
 const LeadersDash = ({ users }) => {
@@ -23,7 +25,7 @@ const LeadersDash = ({ users }) => {
             return (
               <tr key={user.id}>
                 <td className="border text-xl m-2">
-                  <p data-testid="uName">{user.name}</p>
+                  <p className="m-2" data-testid="uName">{user.name}</p> <img className="inline pl-1" src={user.avatarURL} width="25" alt="img" />
                 </td>
                 <td className="border text-xl m-2">
                   <p data-testid="noOfAns">{Object.keys(user.answers).length}</p>
@@ -49,4 +51,7 @@ const mapStateToProps = ({ users }) => {
   };
 };
 
+LeadersDash.propTypes = {
+  users : PropTypes.array
+};
 export default connect(mapStateToProps)(LeadersDash);

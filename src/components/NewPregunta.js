@@ -1,6 +1,7 @@
 import { connect } from "react-redux";
 import { useEffect, useState } from "react";
 import { useNavigate } from "react-router-dom";
+import PropTypes from "prop-types";
 
 import Authenticate from "./Authenticate";
 import { handleAddQuestion } from "../actions/questions";
@@ -106,6 +107,11 @@ const mapStateToProps = ({ authedUser }) => {
   return {
     authedUser
   };
+};
+
+NewPregunta.propTypes = {
+  dispatch : PropTypes.func,
+  authedUser : PropTypes.object
 };
 
 export default connect(mapStateToProps)(NewPregunta);
